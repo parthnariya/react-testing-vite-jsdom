@@ -7,14 +7,19 @@ type CommentFormPropType = {
 const CommentForm = ({ setComments }: CommentFormPropType) => {
   const [author, setAuthor] = useState("");
   const [comment, setComment] = useState("");
+  const isFieldsAreValid = () => author.length > 0 && comment.length > 0;
+
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log({ author, comment });
-    if (author.length > 0 && comment.length > 0)
-      setComments((prev) => [...prev, {
-        author,
-        comment
-      }]);
+    if (isFieldsAreValid())
+      setComments((prev) => [
+        ...prev,
+        {
+          author,
+          comment,
+        },
+      ]);
   };
   return (
     <form onSubmit={submitHandler}>
@@ -37,7 +42,9 @@ const CommentForm = ({ setComments }: CommentFormPropType) => {
           onChange={(e) => setAuthor(e.target.value)}
         />
       </div>
-      <button type="submit">Add Comment</button>
+      <button type="submit" disabled={!isFieldsAreValid()}>
+        Add Comment
+      </button>
     </form>
   );
 };
