@@ -1,0 +1,25 @@
+form {
+    margin: auto;
+    padding: 0px;
+    width: 500px;
+}
+
+.commentBox {
+    width: 496px;
+    height: 80px;
+    margin-bottom: 12px;
+}
+
+input {
+    width: 360px;
+    float: right;
+}
+
+button {
+    margin-top: 12px;
+    width: 500px;
+    color: #fff;
+    background-color: #767676;
+    padding: 6px;
+    border-radius: 8px;
+}

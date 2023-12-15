@@ -1,0 +1,17 @@
+.card {
+    margin: 24px;
+    padding: 2px 24px;
+    font-family: 'Palatino';
+    font-style: italic;
+    background-color: #000;
+    height: 80px;
+    position: relative;
+    border: 1px solid #767676;
+    border-radius: 8px;
+}
+
+.authorTag {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+}
