@@ -9,6 +9,7 @@ function App() {
   console.log({ comments });
   return (
     <div className="app">
+      Hello
       <CommentForm setComments={setComments} />
       <CommentList comments={comments} />
     </div>
